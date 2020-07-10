@@ -12,16 +12,22 @@ export class AddCustomerPage{
      postalcode = element(by.model('postCd'));
 
      addcustomerbtn = element(by.className('btn btn-default'));*/
+    myaccount = new pageEl(by.id('my-accounts'))
      fname = new pageEl(by.model('fName'));
      lname = new pageEl(by.model('lName'));
      postalcode = new pageEl(by.model('postCd'));
      inputs = new pageEl(by.tagName('input'));
      addcustomerbtn = new pageEl(by.className('btn btn-default'));
 
-
+     
      firstname = this.custData.customers.firstname;
      lastname = this.custData.customers.lastname;
      pcode = this.custData.customers.postalcode;
+
+     async registerSite() {
+        
+        this.myaccount.click();
+    }
 
      async AddCustomer(){
          this.fname.sendKeys(this.firstname);

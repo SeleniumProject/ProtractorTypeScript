@@ -32,12 +32,12 @@ describe("Banking project test", async function(){
         //log.debug(await homePage.mainHeading.getText());
         browser.sleep(2000);
 
-        await homePage.navigateToBankManagerLogin();
-        //browser.sleep(1000);
+        await homePage.navigateToMyAccountPage();
+        browser.sleep(1000);
         await managerPage.navigateToAddCustomer();
-        //browser.sleep(1000);
-        await new AddCustomerPage().AddCustomer();
-        //browser.sleep(1000);
+        // //browser.sleep(1000);
+        // await new AddCustomerPage().registerSite();
+        // //browser.sleep(1000);
 
         await managerPage.navigateToOpenAccount();
         //browser.sleep(2000);

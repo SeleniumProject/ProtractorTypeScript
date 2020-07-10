@@ -3,9 +3,11 @@ import { HomePage } from "../pages/HomePage";
 import { Util } from "../Utility/Util";
 import { AddCustomerPage } from "../pages/AddCustomerPage";
 import { OpenAccountPage } from "../pages/OpenAccountPage";
+
 import {ManagerPage} from "../pages/ManagerPage";
 import { brotliCompress } from "zlib";
 import { browser } from "protractor";
+import { LoginPage } from '../pages/LoginPage';
 
 var _ = require('lodash');
 
@@ -19,19 +21,21 @@ setDefaultTimeout(60 * 1000);
 const log = require("../config/log4js").default;
 
 var homePage: HomePage = new HomePage();
+var loginPage: LoginPage = new LoginPage();
 const addCustPage: AddCustomerPage = new AddCustomerPage();
 var openAccount: OpenAccountPage = new OpenAccountPage();
 
 Given(/^I am on XYZ Bank home page$/, async () => {
   log.debug("Starting");
-  await homePage.navigateToHomePage();
-  log.debug(await homePage.mainHeading.getText('mainHeading'));
-  await expect(await homePage.mainHeading.getText('mainHeading')).to.equal("XYZ Bank");
+  await homePage.navigateToMyAccountPage();
+ // log.debug(await homePage.mainHeading.getText('mainHeading'));
+  //await expect(await homePage.mainHeading.getText('mainHeading')).to.equal("XYZ Bank");
 });
 
 Then(/^I go to Add Customer screen$/, async () => {
-  await homePage.navigateToBankManagerLogin();
-  await new ManagerPage().navigateToAddCustomer();
+  await loginPage.enterEmailAddress();
+  await loginPage.clickRegisterButton();
+  //await new ManagerPage().navigateToAddCustomer();
   //await browser.sleep(2000);
 });
 
