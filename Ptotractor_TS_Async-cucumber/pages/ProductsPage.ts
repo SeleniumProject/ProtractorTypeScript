@@ -13,6 +13,9 @@ export class ProductPage {
   choosesize = new pageEl(by.xpath('//*[@class="list-inline size-sku-list"]/li/div/button[1]'));
   addtoCart = new pageEl(by.xpath('//*[@class="btn btn-add-to-cart bold"]'));
   continueshopping = new pageEl(by.xpath('//*[@id="pdp-modal"]/div/div/div[2]/button'));
+  cartIcon = new pageEl(by.xpath('//*[@id="container-icons"]/div/div/ul/li[3]/a'));
+  securecheckout = new pageEl(by.id('secure-checkout'));
+  
   
 
 }
