@@ -24,6 +24,16 @@ export class pageEl{
         }
     }
 
+    async reload(){
+        try{
+            await (await this.getElement()).reload();
+            log.debug("Clicked on " + this.byEL);
+        }catch(ex){
+            log.debug(ex);
+            throw new Error(ex);
+        }
+    }
+
     async sendKeys(text: string){
         try{
             await (await this.getElement()).sendKeys(text);

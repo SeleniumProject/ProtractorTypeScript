@@ -58,7 +58,7 @@ describe("Banking project test", async function(){
         log.debug(await homePage.mainHeading.getText("SiteMainHeader"));
         browser.sleep(2000);
 
-        await homePage.navigateToBankManagerLogin();
+       // await homePage.navigateToBankManagerLogin();
         //browser.sleep(1000);
         await managerPage.navigateToAddCustomer();
         await addCustPage.enter2ndInput();

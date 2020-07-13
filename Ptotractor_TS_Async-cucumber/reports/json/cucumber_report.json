@@ -1,54 +1,252 @@
 [
   {
     "keyword": "Feature",
-    "name": "User should be able to add a customer & open an account",
+    "name": "User should be able to register to website and checkout a product",
     "line": 1,
-    "id": "user-should-be-able-to-add-a-customer-&-open-an-account",
+    "id": "user-should-be-able-to-register-to-website-and-checkout-a-product",
     "tags": [],
     "uri": "Features\\Customers.feature",
     "elements": [
       {
-        "id": "user-should-be-able-to-add-a-customer-&-open-an-account;create-an-account-to-collectionetc",
+        "id": "user-should-be-able-to-register-to-website-and-checkout-a-product;create-an-account-for-collectionetc",
         "keyword": "Scenario",
-        "line": 9,
-        "name": "Create An Account to Collectionetc",
+        "line": 20,
+        "name": "Create an account for collectionetc",
         "tags": [],
         "type": "scenario",
         "steps": [
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 4,
-            "name": "I am on XYZ Bank home page",
+            "line": 21,
+            "name": "User should be able to navigate to site url",
             "match": {
-              "location": "stepDef\\Customers.ts:30"
+              "location": "stepDef\\Customers.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 2112000000
+              "duration": 1389000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "line": 5,
-            "name": "I go to Add Customer screen",
+            "keyword": "When ",
+            "line": 22,
+            "name": "User click on My Account link",
             "match": {
-              "location": "stepDef\\Customers.ts:37"
+              "location": "stepDef\\Customers.ts:38"
             },
             "result": {
-              "status": "failed",
-              "duration": 3764000000,
-              "error_message": "Error: WebDriverError: element click intercepted: Element <button type=\"button\" id=\"registration-submit\" class=\"btn btn-green registration-submit-button\">...</button> is not clickable at point (674, 568). Other element would receive the click: <div id=\"monetate_lightbox_mask\" style=\"background-color: rgb(0, 0, 0); height: calc(100% + 5000px); left: 0px; margin: 0px; padding: 0px; position: fixed; top: 0px; width: 100%; opacity: 0.8; display: block; transition: opacity 0.5s ease 0s;\"></div>\n  (Session info: chrome=83.0.4103.116)\n  (Driver info: chromedriver=83.0.4103.14 (be04594a2b8411758b860104bc0a1033417178be-refs/branch-heads/4103@{#119}),platform=Windows NT 10.0.19041 x86_64)\n    at pageEl.<anonymous> (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\Utility\\pageEl.ts:23:19)\n    at step (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\outputjs\\Utility\\pageEl.js:33:23)\n    at Object.throw (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\outputjs\\Utility\\pageEl.js:14:53)\n    at rejected (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\outputjs\\Utility\\pageEl.js:6:65)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)"
+              "status": "passed",
+              "duration": 2082000000
             }
           },
           {
             "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "I enter John, Cena, 12345 to create a customer",
+            "keyword": "When ",
+            "line": 23,
+            "name": "I Enter the Email \"rk1238@gmail.com\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:42"
+            },
             "result": {
-              "status": "undefined"
+              "status": "passed",
+              "duration": 3123000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "User click on Register button",
+            "match": {
+              "location": "stepDef\\Customers.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6754000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "User enter the Firstname \"stephen\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1894000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 26,
+            "name": "User enter the Lastname \"jhon\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:58"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 77000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 27,
+            "name": "User enter the addrone \"Street1\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:63"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 95000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "User enter the addrtwo \"Street2\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:69"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 94000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 29,
+            "name": "User enter the city \"Florida\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 96000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 30,
+            "name": "User enter the state \"Colorado\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:81"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 31,
+            "name": "User enter the zip \"80303\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:86"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 81000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 32,
+            "name": "User enter the phone \"970-419-3579\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:92"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 33,
+            "name": "User enter the password \"test123\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:98"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 74000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 34,
+            "name": "User enter the confirmpassword \"test123\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:103"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 73000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 35,
+            "name": "User enter the gender \"Male\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:109"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 36,
+            "name": "User enter the month \"July\"",
+            "match": {
+              "location": "stepDef\\Customers.ts:115"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 39,
+            "name": "I click on Register button",
+            "match": {
+              "location": "stepDef\\Customers.ts:125"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 40,
+            "name": "User click on Keep Original button",
+            "match": {
+              "location": "stepDef\\Customers.ts:129"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2888000000
             }
           },
           {
@@ -59,7 +257,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 0
+              "duration": 1000000
             }
           },
           {
@@ -71,73 +269,6 @@
             "result": {
               "status": "passed",
               "duration": 1000000
-            }
-          }
-        ]
-      },
-      {
-        "id": "user-should-be-able-to-add-a-customer-&-open-an-account;create-an-account-to-collectionetc",
-        "keyword": "Scenario",
-        "line": 10,
-        "name": "Create An Account to Collectionetc",
-        "tags": [],
-        "type": "scenario",
-        "steps": [
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 4,
-            "name": "I am on XYZ Bank home page",
-            "match": {
-              "location": "stepDef\\Customers.ts:30"
-            },
-            "result": {
-              "status": "failed",
-              "duration": 1083000000,
-              "error_message": "Error: WebDriverError: element click intercepted: Element <a id=\"my-accounts\" href=\"/account/my-account/\" data-target=\"#\" data-hover=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">...</a> is not clickable at point (1059, 31). Other element would receive the click: <div id=\"monetate_lightbox_mask\" style=\"background-color: rgb(0, 0, 0); height: calc(100% + 5000px); left: 0px; margin: 0px; padding: 0px; position: fixed; top: 0px; width: 100%; opacity: 0.8; display: block; transition: opacity 0.5s ease 0s;\"></div>\n  (Session info: chrome=83.0.4103.116)\n  (Driver info: chromedriver=83.0.4103.14 (be04594a2b8411758b860104bc0a1033417178be-refs/branch-heads/4103@{#119}),platform=Windows NT 10.0.19041 x86_64)\n    at pageEl.<anonymous> (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\Utility\\pageEl.ts:23:19)\n    at step (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\outputjs\\Utility\\pageEl.js:33:23)\n    at Object.throw (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\outputjs\\Utility\\pageEl.js:14:53)\n    at rejected (C:\\Users\\alpha\\OneDrive\\Documents\\ProtractorTypeScript\\Ptotractor_TS_Async-cucumber\\outputjs\\Utility\\pageEl.js:6:65)\n    at processTicksAndRejections (internal/process/task_queues.js:97:5)"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 5,
-            "name": "I go to Add Customer screen",
-            "match": {
-              "location": "stepDef\\Customers.ts:37"
-            },
-            "result": {
-              "status": "skipped"
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 6,
-            "name": "I enter Trish, Stratus, 34567 to create a customer",
-            "result": {
-              "status": "undefined"
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "config\\hooks.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "match": {
-              "location": "node_modules\\protractor-cucumber-framework\\lib\\resultsCapturer.js:27"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 0
             }
           }
         ]

@@ -40,28 +40,134 @@ When(/^User click on My Account link$/, async () => {
 })    
 
 Then(/^I Enter the Email "([^"]*)"$/, async (email) => {
-  await register.enterEmailAddresstxt(email);
-await browser.sleep(3000);
-// })
+  await register.enterEmailinLoginPage(email);
+  await browser.sleep(3000);
+})
 
-  When(/^User click on Register button$/, async () => {
+When(/^User click on Register button$/, async () => {
     
-    await loginPage.clickRegisterButton();
-  })
-Then(/^I go to Add Customer screen$/, async () => {
-  
-  await register.enterRegistrationData();
-  //await new ManagerPage().navigateToAddCustomer();
-  //await browser.sleep(2000);
-});
-  
-  When(/^User fill ([^"]*), ([^"]*), ([^"]*), ([^"]*), ([^"]*), ([^"]*), ([^"]*), ([^"]*), ([^"]*) in register screen$/, async () => {
+  await loginPage.clickRegisterButton();
+  await browser.sleep(5000);
+})
+When(/^User enter the Firstname "([^"]*)"$/, async (fname) => {
     
+  await register.enterFirstName(fname);
+  
+})
+
+When(/^User enter the Lastname "([^"]*)"$/, async (lname) => {
+    
+  await register.enterLastName(lname);
+  
+})
+When(/^User enter the addrone "([^"]*)"$/, async (addrone) => {
+    
+  await register.enterAddressone(addrone);
+  
+})
+
+When(/^User enter the addrtwo "([^"]*)"$/, async (addtwo) => {
+    
+  await register.enterAddresstwo(addtwo);
+  
+})
+
+When(/^User enter the city "([^"]*)"$/, async (city) => {
+    
+  await register.enterCity(city);
+  
+})
+
+When(/^User enter the state "([^"]*)"$/, async (state) => {
+    
+  await register.selectState(state);
+  
+})
+When(/^User enter the zip "([^"]*)"$/, async (zip) => {
+    
+  await register.enterPinCode(zip);
+  
+})
+
+When(/^User enter the phone "([^"]*)"$/, async (phone) => {
+    
+  await register.enterPhoneNumber(phone);
+  
+})
+
+When(/^User enter the password "([^"]*)"$/, async (password) => {
+    
+  await register.enterPassword(password);
+  
+})
+When(/^User enter the confirmpassword "([^"]*)"$/, async (confirmpass) => {
+    
+  await register.enterConfirmPassword(confirmpass);
+  
+})
+  
+When(/^User enter the gender "([^"]*)"$/, async (gender) => {
+    
+  await register.selectGender(gender);
+  
+})
+
+When(/^User enter the month "([^"]*)"$/, async (month) => {
+    
+  await register.selectBirthMonth(month);
+  
+})
+
+  When(/^User fill "([^"]*)", "([^"]*)", "([^"]*)", "("[^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)", "([^"]*)"$/, async (fname, lname, add1, add2, city, state, zip,phone, password, confirmpassword,gender, month) => {
+    await register.enterRegistrationData(fname,lname, add1,add2,city,state,zip,phone, password,confirmpassword,gender,month)
   })
 
   When(/^I click on Register button$/, async () => {
-    
+    await register.clickRegisterButton();
   })
+
+  When(/^User click on Keep Original button$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  
+  When(/^User enter the product in search box "([^"]*)"$/, async (product) => {
+    await register.clickKeepOriginalButton();
+  })
+  
+    When(/^I Click on Search button$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  
+  When(/^I click on table product$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  When(/^I click on choose option$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  When(/^I Click on Add to Cart$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  When(/^I Click on Cart Icon$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  When(/^I Click on Secure checkout$/, async () => {
+    await register.clickKeepOriginalButton();
+  })
+  When(/^I Enter the Card Number "([^"]*)"$/, async (cardnum) => {
+    await register.clickKeepOriginalButton();
+  })
+  
+  When(/^I Enter the Expiry Date "([^"]*)"$/, async (cardnum) => {
+    await register.clickKeepOriginalButton();
+  })
+  When(/^I Enter the CVV number "([^"]*)"$/, async (cardnum) => {
+    await register.clickKeepOriginalButton();
+  })
+
+
+
+
+
 // Then(/^I enter ([^"]*), ([^"]*), ([^"]*) to create a customer$/, async (fname, lname, pcode) => {
 //   log.debug(fname + lname + pcode);
 //   await addCustPage.addCustomer(fname, lname, pcode);
@@ -87,7 +193,7 @@ Then(/^I go to Add Customer screen$/, async () => {
 // })
 
 // Then(/^I select currency as "([^"]*)"$/, async (currency) => {
-  await openAccount.selectACurrency(currency);
+ // await openAccount.selectACurrency(currency);
 //   //await browser.sleep(3000);
 // })
 
