@@ -7,12 +7,13 @@ export class HomePage{
     myAccountMenu = new pageEl(by.id('my-accounts'));
     bankManagerLogin = new pageEl(by.buttonText('Bank Manager Login'));
     mainHeading = new pageEl(by.className('mainHeading'));
-
-    async navigateToMyAccountPage(){
-        await this.myAccountMenu.click();
+    logo = new pageEl(by.xpath('//*[@alt="Collections Etc."]'));
+    async navigateToMyAccountPage() {
+        await this.logo.click();
+        
     }
 
-    async navigateToBankManagerLogin(){
-        await this.bankManagerLogin.click();
+    async clickOnregisterLink(){
+        await this.myAccountMenu.click();
     }
 }
