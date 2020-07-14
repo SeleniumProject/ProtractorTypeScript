@@ -9,6 +9,7 @@ import { brotliCompress } from "zlib";
 import { browser } from "protractor";
 import { LoginPage } from '../pages/LoginPage';
 import { CreateAnAccount } from '../pages/CreateAnAccount';
+import { ProductsPage } from '../pages/ProductsPage';
 
 var _ = require('lodash');
 
@@ -24,8 +25,7 @@ const log = require("../config/log4js").default;
 var homePage: HomePage = new HomePage();
 var register: CreateAnAccount = new CreateAnAccount();
 var loginPage: LoginPage = new LoginPage();
-const addCustPage: AddCustomerPage = new AddCustomerPage();
-var openAccount: OpenAccountPage = new OpenAccountPage();
+var productPage: ProductsPage = new ProductsPage();
 
 
 Given(/^User should be able to navigate to site url$/, async () => {
@@ -131,37 +131,48 @@ When(/^User enter the month "([^"]*)"$/, async (month) => {
   })
   
   When(/^User enter the product in search box "([^"]*)"$/, async (product) => {
-    await register.clickKeepOriginalButton();
+    await productPage.searchForProduct(product);
+    await browser.sleep(2000);
   })
   
     When(/^I Click on Search button$/, async () => {
-    await register.clickKeepOriginalButton();
+      await productPage.clickSearchButton();
+      await browser.sleep(3500);
   })
   
   When(/^I click on table product$/, async () => {
-    await register.clickKeepOriginalButton();
+    await productPage.selectProduct();
+    await browser.sleep(3000);
   })
   When(/^I click on choose option$/, async () => {
-    await register.clickKeepOriginalButton();
+    await productPage.chooseProductSize();
+    await productPage.clickaddqty();
+
   })
   When(/^I Click on Add to Cart$/, async () => {
-    await register.clickKeepOriginalButton();
+    await productPage.addToCart();
+    await browser.sleep(2000);
   })
   When(/^I Click on Cart Icon$/, async () => {
-    await register.clickKeepOriginalButton();
+    await productPage.clickCartIcon();
+    await browser.sleep(2000);
   })
   When(/^I Click on Secure checkout$/, async () => {
-    await register.clickKeepOriginalButton();
+    await productPage.clickSecureCheckout();
+    await browser.sleep(2000);
   })
   When(/^I Enter the Card Number "([^"]*)"$/, async (cardnum) => {
-    await register.clickKeepOriginalButton();
+    await productPage.enterCreditCardNumber(cardnum);
+    await browser.sleep(2000);
   })
   
-  When(/^I Enter the Expiry Date "([^"]*)"$/, async (cardnum) => {
-    await register.clickKeepOriginalButton();
+  When(/^I Enter the Expiry Date "([^"]*)"$/, async (expirydate) => {
+    await productPage.enterExpiryDate(expirydate);
+    await browser.sleep(2000);
   })
-  When(/^I Enter the CVV number "([^"]*)"$/, async (cardnum) => {
-    await register.clickKeepOriginalButton();
+  When(/^I Enter the CVV number "([^"]*)"$/, async (cvv) => {
+    await productPage.enterCvvNumber(cvv);
+    await browser.sleep(2000);
   })
 
 

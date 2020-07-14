@@ -15,8 +15,12 @@ const cucumberReporterOptions = {
     reportSuiteAsScenarios: true,
     theme: "bootstrap",
     metadata: {
-        "App Name": "XYZ bank",
-        "Platform": "Mac OS" }
+        "App Name": "Collections Etc",
+        "SiteUrl" : "https://www.collectionsetc.com/",
+        "Platform": "Windows OS",
+        "User": "QA User",
+        "Category": "regression"
+    }
 };
 
 export class Reporter {
